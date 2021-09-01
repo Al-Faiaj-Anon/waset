@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Google</title>
+  </head>
+  <body>
+    <header>
+      <div id="menu"><img src="res/menu.png" alt="" height="25" width="25"/></div>
+      <div>
+        <div id="cat-all" class="slider-selected">ALL</div>
+        <div id="cat-img">IMAGES</div>
+        <div id="cat-slider"></div>
+      </div>
+      <div></div>
+      <div><img src="res/dots-grid.png" alt="" height="25" width="25"/></div>
+      <div>
+        <button id="signin">Sign in</button>
+      </div>
+    </header>
+    <br />
+    <br />
+    <div id="con">
+      <img src="res/google.png" alt="" height="100"/>
+      <br />
+      <div id="search">
+        <img src="res/search.png" alt="" height="25px" width="25px"/>
+        <input type="text" name="" id="" value="" />
+      </div>
+      <br />
+      <br />
+      <a href="#https://www.google.com/search?q=covid+vaccine+registration&utm_source=google&utm_medium=HPP&utm_campaign=covid_vaccine_bn_en_mobile&utm_id=covid_vaccine_bn_en_mobile">Register for COVID vaccine today</a>
+      <p>Google offered in : <span 
+      class="blue"> বাংলা</span></p>
+    </div>
+    <footer>
+      <div>
+        Bangladesh
+      </div>
+      <div>
+        <div>Settings</div>
+        <div>Privacy</div>
+        <div>Terms</div>
+        <div>Advertising</div>
+        <div>Business</div>
+        <div>About</div>
+      </div>
+    </footer>
+    
+
+
+    <div id=nav-con>
+      <div>
+        <br />
+        <br />
+        <pre>
+             Nothing  
+        </pre>
+      </div>
+    </div>
+
+  </body>
+  <script type="text/javascript" charset="utf-8">
+    $("#cat-img").click(function(){
+      $("#cat-slider").animate({left:'50px',width:"55px"},300);
+      $("#cat-all").removeClass("slider-selected");
+      $("#cat-img").addClass("slider-selected");
+    });
+    $("#cat-all").click(function(){
+      $("#cat-slider").animate({left:'0',width:"40px"},300);
+      $("#cat-all").addClass("slider-selected");
+      $("#cat-img").removeClass("slider-selected");
+    });
+    
+    
+    $("#nav-con").click(function(){
+      $("#nav-con div").animate({left:"-250px"},300);
+      setTimeout(hide,300);
+    });
+    $("#menu").on("click",function(){
+      $("#nav-con").css({"display":"block"});
+      $("#nav-con div").animate({left:"0"},300);
+    });
+    $("#nav-con div").click(function(event){
+      event.stopPropagation();
+    });
+    
+    
+    function hide(){
+      $("#nav-con").css({"display":"none"});
+    }
+    
+    
+  </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
